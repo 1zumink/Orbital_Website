@@ -3,9 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Orbital website</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
     <script defer src="scripts/scripts.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.139.0/build/three.module.js",
+          "OrbitControls": "https://unpkg.com/three@0.139.0/examples/jsm/controls/OrbitControls.js",
+          "GLTFLoader": "https://unpkg.com/three@0.139.0/examples/jsm/loaders/GLTFLoader.js",
+          "RectAreaLightUniformsLib": "https://unpkg.com/three@0.139.0/examples/jsm/lights/RectAreaLightUniformsLib.js"
+        }
+      }
+    </script>
+
+    <script type="module" src="scripts/model.js"></script>
   </head>
-  <body></body>
+  <body>
+    <section class="topper">
+      <div class="logo"></div>
+      <div class="anchor1"></div>
+      <div class="anchor2"></div>
+      <div class="anchor3"></div>
+      <div class="anchor4"></div>
+    </section>
+    <section class="colors">
+      <div class="cyan"></div>
+      <div class="green"></div>
+      <div class="pink"></div>
+    </section>
+    <section class="rings3D">
+      <div class="ring1"></div>
+      <div class="ring2"></div>
+      <div class="ring3"></div>
+      <div class="bgGlow"></div>
+      <div class="textBig1 textBigLeft"></div>
+      <div class="textBig2 textBigRight"></div>
+      <div class="ringsBlender"></div>
+    </section>
+    <section class="whereToGo">
+      <div class="destin destin1">
+        <div class="cover none"></div>
+        <div class="miniCover"></div>
+      </div>
+      <div class="destin destin2">
+        <div class="cover none"></div>
+        <div class="miniCover"></div>
+      </div>
+      <div class="destin">
+        <div class="cover none"></div>
+        <div class="miniCover"></div>
+      </div>
+
+      <!-- <div class="textBigAsk"></div>
+      <div class="textSmallAsk"></div>
+      <div class="destination1"></div>
+      <div class="destination2"></div>
+      <div class="destination3"></div>
+      <div class="destination4"></div>
+      <div class="destination5"></div>
+      <div class="destination6"></div>
+      <div class="destination7"></div>
+      <div class="bgGlow2"></div> -->
+    </section>
+    <section class="parallax">
+      <div class="ballParallaxFull1 circle"></div>
+      <div class="ballParallaxFull2 circle"></div>
+      <div class="ballParallaxFull3 circle"></div>
+      <div class="ballParallaxFull4 circle"></div>
+      <div class="ballParallaxFull5 circle"></div>
+      <div class="ballParallaxFull6 circle"></div>
+      <div class="ballParallaxGlass1 circle"></div>
+      <div class="ballParallaxGlass2 circle"></div>
+      <div class="ballParallaxGlass3 circle"></div>
+      <div class="ballParallaxGlass4 circle"></div>
+      <div class="textParallax">Вперед!</div>
+    </section>
+    <section class="formSection">
+      <div class="form">
+        <input type="text" placeholder="Имя" />
+        <input type="text" placeholder="Фамилия" />
+        <input type="text" placeholder="???" />
+        <div class="formButton">отправить</div>
+      </div>
+    </section>
+    <section class="asteroidDrag">
+      <div class="asteroidPhoto1"></div>
+      <div class="asteroidPhoto2"></div>
+      <div class="asteroidPhoto3"></div>
+      <div class="asteroidPhoto4"></div>
+      <div class="asteroidPhoto5"></div>
+      <div class="asteroidPlace1"></div>
+      <div class="asteroidPlace2"></div>
+      <div class="asteroidPlace3"></div>
+      <div class="asteroidPlace4"></div>
+      <div class="asteroidPlace5"></div>
+      <div class="bgRing1"></div>
+      <div class="bgRing2"></div>
+      <div class="bgRing3"></div>
+    </section>
+    <!-- <section class="TRID"><div class="Rings"></div></section> -->
+  </body>
 </html>

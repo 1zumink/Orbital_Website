@@ -1,0 +1,338 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: black;
+}
+#body::after {
+  content: '';
+  background-image: url('../images/bg.png');
+  width: 1440px;
+  height: 8463px;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 720px);
+  opacity: 0.4;
+  z-index: 5;
+}
+/* ТОППЕР */
+.topper {
+  width: 100%;
+  height: 15vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5.56vw;
+  padding-right: 5.56vw;
+}
+
+/* ТОППЕР КОМПОНЕНТЫ */
+.logo {
+  width: 22vw;
+  height: 7vw;
+  background-image: url('../images/logo.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.anchor1 {
+  width: 12vw;
+  height: 6vw;
+  background-image: url('../images/anchor1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.anchor2 {
+  width: 12vw;
+  height: 6vw;
+  background-image: url('../images/anchor1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.anchor3 {
+  width: 12vw;
+  height: 6vw;
+  background-image: url('../images/anchor1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.anchor4 {
+  width: 12vw;
+  height: 6vw;
+  background-image: url('../images/anchor1.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* ВЫБОР ЦВЕТА */
+.colors {
+  width: 100%;
+  height: 38.13vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ВЫБОР ЦВЕТА КОМПОНЕНТЫ */
+.colors > div {
+  width: 30vw;
+  height: 30vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+div.cyan {
+  background-image: url('../images/cyan.svg');
+}
+div.green {
+  background-image: url('../images/green.svg');
+}
+div.pink {
+  background-image: url('../images/pink.svg');
+  background-size: 130%;
+}
+/* КОЛЬЦА */
+.rings3D {
+  width: 100%;
+  height: 600vw;
+  position: relative;
+}
+
+/* КОЛЬЦА КОМПОНЕНТЫ */
+.textBig1 {
+  width: 80.76vw;
+  height: 26.67vw;
+  left: 10%;
+  top: 1vw;
+  position: sticky;
+  background-image: url('../images/textBig1.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+.textBig2 {
+  width: 96.39vw;
+  height: 25.42vw;
+  left: 80%;
+  top: 39vw;
+  position: sticky;
+  background-image: url('../images/textBig2.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+.ring1 {
+  width: 1vw;
+  height: 1vw;
+}
+.ringsBlender {
+  z-index: 2;
+  position: sticky;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 130vw;
+  background: transparent;
+  background-image: url('../images/BgGlow.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: -15vw;
+}
+/* КУДА ЛЕТИМ */
+.whereToGo {
+  width: 100%;
+  display: flex;
+  gap: 1vw;
+}
+/* КУДА ЛЕТИМ КОМПОНЕНТЫ */
+.destin {
+  position: relative;
+  min-width: 5vw;
+}
+.destin1 .cover {
+  background-image: url('../images/cover.svg');
+}
+.destin1 .miniCover {
+  background-image: url('../images/miniCover.svg');
+}
+.cover {
+  width: 0vw;
+  height: 25vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all ease 0.8s;
+  opacity: 0;
+  position: absolute;
+}
+.cover.anim {
+  opacity: 1;
+  width: 22vw;
+  transition: all ease 1s;
+}
+.miniCover.anim {
+  opacity: 0;
+  width: 0vw;
+  transition: all ease 1s;
+}
+.miniCover {
+  width: 5vw;
+  height: 25vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all ease 0.8s;
+  position: absolute;
+}
+.destin1:hover .cover {
+  display: block;
+  width: 22vw;
+  transition: width ease 0.8s;
+}
+.destin1:hover .miniCover {
+  display: none;
+}
+/* ПАРАЛЛАКС КРУГИ */
+.parallax {
+  height: 100vw;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+/* ПАРАЛЛАКС КРУГИ КОМПОНЕНТЫ */
+.textParallax {
+  left: 5vw;
+  text-align: left;
+  position: sticky;
+  font-size: 15vw;
+  color: #fff;
+  z-index: -1;
+}
+.ballParallaxFull1 {
+  left: 5.56%;
+  top: 14.1%;
+  width: 18.3vw;
+  height: 18.3vw;
+  position: absolute;
+  background-image: url('../images/ballParallaxFull1.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.ballParallaxFull2 {
+  left: 24.93%;
+  top: 30%;
+  width: 20.8vw;
+  height: 20.8vw;
+  position: absolute;
+  background-image: url('../images/ballParallaxFull2.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.ballParallaxFull3 {
+  right: -14.65%;
+  top: 5.61%;
+  width: 59.2vw;
+  height: 59.2vw;
+  position: absolute;
+  background-image: url('../images/ballParallaxFull3.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.ballParallaxFull4 {
+  left: 1.46%;
+  top: 36.29%;
+  width: 34vw;
+  height: 34vw;
+  position: absolute;
+  background-image: url('../images/ballParallaxFull4.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.ballParallaxFull5 {
+  right: 8.19%;
+  top: 30.8%;
+  width: 52.4vw;
+  height: 52.4vw;
+  position: absolute;
+  background-image: url('../images/ballParallaxFull5.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.ballParallaxFull6 {
+  left: 30.35%;
+  top: 43.68%;
+  width: 21.25vw;
+  height: 21.25vw;
+  position: absolute;
+  background-image: url('../images/ballParallaxFull6.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.ballParallaxGlass1 {
+  right: 33.61%;
+  top: 11.94%;
+  width: 14.2vw;
+  height: 14.2vw;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('../images/ballParallaxGlass1.svg');
+}
+.ballParallaxGlass2 {
+  left: 12.71%;
+  top: 28.66%;
+  width: 22.7vw;
+  height: 22.7vw;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('../images/ballParallaxGlass2.svg');
+}
+.ballParallaxGlass3 {
+  right: 41.74%;
+  top: 35.06%;
+  width: 22.7vw;
+  height: 22.7vw;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('../images/ballParallaxGlass3.svg');
+}
+.ballParallaxGlass4 {
+  left: 11.53%;
+  top: 55.83%;
+  width: 42vw;
+  height: 42vw;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('../images/ballParallaxGlass4.svg');
+}
+.formSection {
+  width: 100%;
+  height: 55vw;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/scrin0.png');
+}
+.form {
+  display: flex;
+  width: 20vw;
+  min-height: 40vw;
+  flex-direction: column;
+  gap: 1vw;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.01);
+  border-radius: 2vw;
+  border: 3px solid rgba(241, 90, 255, 1);
+}
+.none {
+  display: none;
+}

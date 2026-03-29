@@ -1,0 +1,156 @@
+whereToGoAnim()
+parallaxCircles()
+formAnim()
+animTextLeft()
+animTextRight()
+
+function animTextRight() {
+  let section = document.querySelector('.rings3D')
+  let texts = document.querySelectorAll('.textBigRight')
+  let text = document.querySelector('.textParallax ')
+
+  window.addEventListener('scroll', () => {
+    let rect = section.getBoundingClientRect()
+
+    let progress =
+      (window.innerHeight - rect.top) / (window.innerHeight + rect.height)
+
+    let p = Math.max(0, Math.min(1, progress))
+
+    let moveX = (p - 0.5) * 10000
+
+    texts.forEach((textBigRight) => {
+      textBigRight.style.transform = `translateX(${moveX}px)`
+    })
+  })
+}
+
+function animTextLeft() {
+  let section = document.querySelector('.rings3D')
+  let texts = document.querySelectorAll('.textBigLeft')
+  let text = document.querySelector('.textParallax ')
+
+  window.addEventListener('scroll', () => {
+    let rect = section.getBoundingClientRect()
+
+    let progress =
+      (window.innerHeight - rect.top) / (window.innerHeight + rect.height)
+
+    let p = Math.max(0, Math.min(1, progress))
+
+    let moveX = (p - 0.5) * 10000
+
+    texts.forEach((textBigLeft) => {
+      textBigLeft.style.transform = `translateX(${-moveX}px)`
+    })
+  })
+}
+
+function formAnim() {
+  let button = document.querySelector('.formButton')
+  let form = document.querySelector('.form')
+  let section = document.querySelector('.formSection')
+
+  let images = [1, 2]
+  let randomIndex = Math.floor(images.length * Math.random())
+
+  button.addEventListener('click', () => {
+    // form.innerHTML = '<h2>Данные сохранены</h2>'
+    form.style.display = 'none'
+
+    section.style.backgroundImage = `url("images/scrin${images[randomIndex]}.png")`
+  })
+}
+
+function parallaxCircles() {
+  let section = document.querySelector('.parallax')
+  let circles = document.querySelectorAll('.circle')
+
+  window.addEventListener('scroll', () => {
+    let rect = section.getBoundingClientRect()
+
+    let progress =
+      (window.innerHeight - rect.top) / (window.innerHeight + rect.height)
+
+    let p = Math.max(0, Math.min(1, progress))
+
+    let moveY = (p - 0.5) * 7000
+    // if (p >= 0.586) {
+    //   text.innerText = 'new new new'
+    // } else {
+    //   text.innerText = 'text text text'
+    // }
+    circles.forEach((circle) => {
+      circle.style.transform = `translateY(${-moveY}px)`
+    })
+  })
+  let text = document.querySelector('.textParallax ')
+  let target = document.querySelector('.ballParallaxFull6')
+
+  let observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          text.innerText = 'new new new'
+        }
+      })
+    },
+    {
+      threshold: 1
+    }
+  )
+
+  observer.observe(target)
+}
+
+// function parallax3D() {
+//   let section = document.querySelector('.rings3D')
+//   let model = document.querySelector('.ringsBlender')
+
+//   window.addEventListener('scroll', () => {
+//     let rect = section.getBoundingClientRect()
+
+//     let progress =
+//       (window.innerHeight - rect.top) / (window.innerHeight + rect.height)
+
+//     let p = Math.max(0, Math.min(1, progress))
+
+//     let moveY = (p - 0.5) * 100
+
+//     model.style.transform = `translateY(${moveY}px) `
+//   })
+// }
+
+function whereToGoAnim() {
+  let miniCovers = document.querySelectorAll('.miniCover')
+
+  miniCovers.forEach((miniCover) => {
+    miniCover.addEventListener('mouseover', () => {
+      miniCover.classList.add('anim')
+      setTimeout(() => {
+        miniCover.classList.toggle('none')
+      }, 100)
+
+      let cover = miniCover.previousElementSibling
+
+      cover.classList.toggle('none')
+      setTimeout(() => {
+        cover.classList.add('anim')
+      }, 100)
+    })
+
+    miniCover.addEventListener('mouseout', () => {
+      miniCover.classList.remove('anim')
+      setTimeout(() => {
+        miniCover.classList.toggle('none')
+      }, 100)
+
+      let cover = miniCover.previousElementSibling
+
+      cover.classList.toggle('none')
+      setTimeout(() => {
+        cover.classList.remove('anim')
+      }, 100)
+    })
+  })
+}
