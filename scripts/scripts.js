@@ -91,7 +91,7 @@ function parallaxCircles() {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          text.innerText = 'new new new'
+          text.innerText = 'к звездам!'
         }
       })
     },

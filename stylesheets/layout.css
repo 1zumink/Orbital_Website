@@ -7,6 +7,8 @@ body {
   flex-direction: column;
   position: relative;
   background-color: black;
+  overflow-x: hidden;
+  align-items: center;
 }
 #body::after {
   content: '';
@@ -100,7 +102,7 @@ div.pink {
 /* КОЛЬЦА */
 .rings3D {
   width: 100%;
-  height: 600vw;
+  height: 350vw;
   position: relative;
 }
 
@@ -146,56 +148,287 @@ div.pink {
 }
 /* КУДА ЛЕТИМ */
 .whereToGo {
+  justify-content: center;
   width: 100%;
   display: flex;
-  gap: 1vw;
 }
 /* КУДА ЛЕТИМ КОМПОНЕНТЫ */
 .destin {
+  gap: 1vw;
   position: relative;
-  min-width: 5vw;
+
+  display: flex;
+  flex-direction: row;
 }
-.destin1 .cover {
-  background-image: url('../images/cover.svg');
-}
-.destin1 .miniCover {
-  background-image: url('../images/miniCover.svg');
-}
-.cover {
-  width: 0vw;
-  height: 25vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: all ease 0.8s;
-  opacity: 0;
-  position: absolute;
-}
-.cover.anim {
-  opacity: 1;
-  width: 22vw;
-  transition: all ease 1s;
-}
-.miniCover.anim {
-  opacity: 0;
-  width: 0vw;
-  transition: all ease 1s;
-}
-.miniCover {
+.card1 {
+  position: relative;
   width: 5vw;
   height: 25vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: all ease 0.8s;
+  transition: width 0.5s ease;
+  overflow: hidden;
+}
+
+.mini1,
+.full1 {
   position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.4s ease;
 }
-.destin1:hover .cover {
-  display: block;
+
+.mini1 {
+  background-image: url('../images/miniCover1.svg');
+  opacity: 1;
+}
+
+.full1 {
+  background-image: url('../images/fullCover1.svg');
+  opacity: 0;
+}
+
+.card1:hover {
   width: 22vw;
-  transition: width ease 0.8s;
 }
-.destin1:hover .miniCover {
-  display: none;
+
+.card1:hover .mini1 {
+  opacity: 0;
 }
+
+.card1:hover .full1 {
+  opacity: 1;
+}
+
+.card2 {
+  position: relative;
+  width: 5vw;
+  height: 25vw;
+  transition: width 0.5s ease;
+  overflow: hidden;
+}
+
+.mini2,
+.full2 {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.4s ease;
+}
+
+.mini2 {
+  background-image: url('../images/miniCover2.svg');
+  opacity: 1;
+}
+
+.full2 {
+  background-image: url('../images/fullCover2.svg');
+  opacity: 0;
+}
+
+.card2:hover {
+  width: 22vw;
+}
+
+.card2:hover .mini2 {
+  opacity: 0;
+}
+
+.card2:hover .full2 {
+  opacity: 1;
+}
+
+.card3 {
+  position: relative;
+  width: 5vw;
+  height: 25vw;
+  transition: width 0.5s ease;
+  overflow: hidden;
+}
+
+.mini3,
+.full3 {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.4s ease;
+}
+
+.mini3 {
+  background-image: url('../images/miniCover3.svg');
+  opacity: 1;
+}
+
+.full3 {
+  background-image: url('../images/fullCover3.svg');
+  opacity: 0;
+}
+
+.card3:hover {
+  width: 22vw;
+}
+
+.card3:hover .mini3 {
+  opacity: 0;
+}
+
+.card3:hover .full3 {
+  opacity: 1;
+}
+.card4 {
+  position: relative;
+  width: 5vw;
+  height: 25vw;
+  transition: width 0.5s ease;
+  overflow: hidden;
+}
+
+.mini4,
+.full4 {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.4s ease;
+}
+
+.mini4 {
+  background-image: url('../images/miniCover4.svg');
+  opacity: 1;
+}
+
+.full4 {
+  background-image: url('../images/fullCover4.svg');
+  opacity: 0;
+}
+
+.card4:hover {
+  width: 22vw;
+}
+
+.card4:hover .mini4 {
+  opacity: 0;
+}
+
+.card4:hover .full4 {
+  opacity: 1;
+}
+.card5 {
+  position: relative;
+  width: 5vw;
+  height: 25vw;
+  transition: width 0.5s ease;
+  overflow: hidden;
+}
+
+.mini5,
+.full5 {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.4s ease;
+}
+
+.mini5 {
+  background-image: url('../images/miniCover5.svg');
+  opacity: 1;
+}
+
+.full5 {
+  background-image: url('../images/fullCover5.svg');
+  opacity: 0;
+}
+
+.card5:hover {
+  width: 22vw;
+}
+
+.card5:hover .mini5 {
+  opacity: 0;
+}
+
+.card5:hover .full5 {
+  opacity: 1;
+}
+.card6 {
+  position: relative;
+  width: 5vw;
+  height: 25vw;
+  transition: width 0.5s ease;
+  overflow: hidden;
+}
+
+.mini6,
+.full6 {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.4s ease;
+}
+
+.mini6 {
+  background-image: url('../images/miniCover6.svg');
+  opacity: 1;
+}
+
+.full6 {
+  background-image: url('../images/fullCover6.svg');
+  opacity: 0;
+}
+
+.card6:hover {
+  width: 22vw;
+}
+
+.card6:hover .mini6 {
+  opacity: 0;
+}
+
+.card6:hover .full6 {
+  opacity: 1;
+}
+.card7 {
+  position: relative;
+  width: 5vw;
+  height: 25vw;
+  transition: width 0.5s ease;
+  overflow: hidden;
+}
+
+.mini7,
+.full7 {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.4s ease;
+}
+
+.mini7 {
+  background-image: url('../images/miniCover7.svg');
+  opacity: 1;
+}
+
+.full7 {
+  background-image: url('../images/fullCover7.svg');
+  opacity: 0;
+}
+
+.card7:hover {
+  width: 22vw;
+}
+
+.card7:hover .mini7 {
+  opacity: 0;
+}
+
+.card7:hover .full7 {
+  opacity: 1;
+}
+
 /* ПАРАЛЛАКС КРУГИ */
 .parallax {
   height: 100vw;
@@ -209,9 +442,11 @@ div.pink {
   left: 5vw;
   text-align: left;
   position: sticky;
-  font-size: 15vw;
+  font-size: 10vw;
   color: #fff;
   z-index: -1;
+  font-family: Montserrat;
+  font-weight: 1000;
 }
 .ballParallaxFull1 {
   left: 5.56%;
