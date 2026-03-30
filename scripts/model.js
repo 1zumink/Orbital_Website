@@ -40,7 +40,7 @@ function initThree() {
   {
     const loader = new GLTFLoader()
     loader.load(
-      '/rings.glb',
+      './rings.glb',
       (gltf) => {
         scene.add(gltf.scene)
         console.log('ok')
