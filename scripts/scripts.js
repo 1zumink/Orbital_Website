@@ -51,14 +51,14 @@ function formAnim() {
   let form = document.querySelector('.form')
   let section = document.querySelector('.formSection')
 
-  let images = [1, 2]
+  let images = [1, 2, 3, 4, 5, 6, 7]
   let randomIndex = Math.floor(images.length * Math.random())
 
   button.addEventListener('click', () => {
     // form.innerHTML = '<h2>Данные сохранены</h2>'
     form.style.display = 'none'
 
-    section.style.backgroundImage = `url("images/scrin${images[randomIndex]}.png")`
+    section.style.backgroundImage = `url("images/dest${images[randomIndex]}.svg")`
   })
 }
 
