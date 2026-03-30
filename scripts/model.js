@@ -1,6 +1,5 @@
 import * as THREE from 'three'
 import { GLTFLoader } from 'GLTFLoader'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   initThree()
@@ -41,7 +40,7 @@ function initThree() {
   {
     const loader = new GLTFLoader()
     loader.load(
-      './rings.glb',
+      '/rings.glb',
       (gltf) => {
         scene.add(gltf.scene)
         console.log('ok')
