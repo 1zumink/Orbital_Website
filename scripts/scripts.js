@@ -239,3 +239,30 @@ function meteorss() {
   requestAnimationFrame(meteorss)
 }
 meteorss()
+
+// function changetogreen() {
+//   let elementsWithImages = [
+//     '.anchor1',
+//     '.anchor2',
+//     '.anchor3',
+//     '.cyan',
+//     '.green',
+//     '.pink',
+//     '.bgGlow2',
+//     '.ballParallaxFull1',
+//     '.ballParallaxFull2',
+//     '.ballParallaxFull3',
+//     '.ballParallaxFull4',
+//     '.ballParallaxFull5',
+//     '.ballParallaxFull6',
+//     '.ballParallaxGlass1',
+//     '.ballParallaxGlass2',
+//     '.ballParallaxGlass3',
+//     '.ballParallaxGlass4'
+//   ]
+//   const elem = document.querySelector('.anchor1')
+
+//   elem.addEventListener('click', () => {
+//     elem.style.backgroundImage = "url('../images/anchor1green.svg')"
+//   })
+// }
