@@ -1,23 +1,232 @@
 @media screen and (max-width: 500px) {
   .rings3D {
-    width: 100%;
-    height: 400vw;
+    height: 80vh;
+  }
+  .meteors {
+    height: 60vh;
+  }
+  .parallax {
+    display: none;
+  }
+  .destin {
+    gap: 1.5vw;
     position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .card1 {
+    position: relative;
+    width: 44vw;
+    height: 10vw;
+    transition: width 0.5s ease;
+    overflow: hidden;
+  }
+
+  .mini1 {
+    background-image: url('../images/miniCover1M.svg');
+    opacity: 1;
+  }
+
+  .card1:hover {
+    height: 50vw;
+    width: 44vw;
+  }
+
+  .card2 {
+    position: relative;
+    width: 44vw;
+    height: 10vw;
+    transition: width 0.5s ease;
+    overflow: hidden;
+  }
+
+  .mini2 {
+    background-image: url('../images/miniCover2M.svg');
+    opacity: 1;
+  }
+
+  .card2:hover {
+    height: 50vw;
+    width: 44vw;
+  }
+
+  .card3 {
+    position: relative;
+    width: 44vw;
+    height: 10vw;
+    transition: width 0.5s ease;
+    overflow: hidden;
+  }
+
+  .mini3 {
+    background-image: url('../images/miniCover3M.svg');
+    opacity: 1;
+  }
+
+  .card3:hover {
+    height: 50vw;
+    width: 44vw;
+  }
+
+  .card4 {
+    position: relative;
+    width: 44vw;
+    height: 10vw;
+    transition: width 0.5s ease;
+    overflow: hidden;
+  }
+
+  .mini4 {
+    background-image: url('../images/miniCover4M.svg');
+    opacity: 1;
+  }
+
+  .card4:hover {
+    height: 50vw;
+    width: 44vw;
+  }
+
+  .card5 {
+    position: relative;
+    width: 44vw;
+    height: 10vw;
+    transition: width 0.5s ease;
+    overflow: hidden;
+  }
+
+  .mini5 {
+    background-image: url('../images/miniCover5M.svg');
+    opacity: 1;
+  }
+
+  .card5:hover {
+    height: 50vw;
+    width: 44vw;
+  }
+
+  .card6 {
+    position: relative;
+    width: 44vw;
+    height: 10vw;
+    transition: width 0.5s ease;
+    overflow: hidden;
+  }
+
+  .mini6 {
+    background-image: url('../images/miniCover6M.svg');
+    opacity: 1;
+  }
+
+  .card6:hover {
+    height: 50vw;
+    width: 44vw;
+  }
+
+  .card7 {
+    position: relative;
+    width: 44vw;
+    height: 10vw;
+    transition: width 0.5s ease;
+    overflow: hidden;
+  }
+
+  .mini7 {
+    background-image: url('../images/miniCover7M.svg');
+    opacity: 1;
+  }
+
+  .card7:hover {
+    height: 50vw;
+    width: 44vw;
+  }
+
+  .whereToGo {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    position: relative;
+    height: 140vw;
+  }
+  .bgGlow2 {
+    top: 25vw;
+    width: 100%;
+    height: 80vw;
+    background-image: url('../images/bgGlow2.svg');
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    background-position: center;
+    rotate: 90deg;
+  }
+  .formSection {
+    width: 100%;
+    height: 150vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/dest0.svg');
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
-.ringsBlender {
-  z-index: 2;
-  position: sticky;
-  top: -20%;
-  left: 0;
-  width: 100%;
-  height: 100vw;
-  background: transparent;
-  background-image: url('../images/BgGlow.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-y: -15vw;
+
+.form {
+  display: flex;
+  width: 50.31%;
+  min-height: 80vw;
+  flex-direction: column;
+  gap: 4vw;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.01);
+  border-radius: 6vw;
+  border: 3px solid rgba(241, 90, 255, 1);
+  align-items: center;
+  justify-content: center;
 }
-.parallax {
-  display: none;
+.formTextBig {
+  text-align: center;
+  font-size: 4vw;
+  color: #fff;
+  font-family: Montserrat;
+  font-weight: 600;
+}
+.formTextSmall {
+  text-align: center;
+  font-size: 2vw;
+  color: #fff;
+  font-family: Montserrat;
+  font-weight: 200;
+  max-width: 30vw;
+}
+.formy {
+  width: 75%;
+  height: 6vw;
+  font-size: 2vw;
+  font-family: Montserrat;
+  font-weight: 100;
+  border-radius: 4vw;
+  border-color: white;
+}
+.formy::placeholder {
+  padding-left: 1vw;
+}
+.formButton {
+  width: 75%;
+  height: 6vw;
+  background-color: black;
+  color: #fff;
+  font-size: 2.4vw;
+  font-family: Montserrat;
+  font-weight: 100;
+  border-radius: 4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }

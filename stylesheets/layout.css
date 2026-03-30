@@ -178,8 +178,8 @@ div.pink {
 }
 .card1 {
   position: relative;
-  width: 6.5vw; /* 5vw * 1.3 */
-  height: 32.5vw; /* 25vw * 1.3 */
+  width: 6.5vw;
+  height: 32.5vw;
   transition: width 0.5s ease;
   overflow: hidden;
 }
@@ -204,7 +204,7 @@ div.pink {
 }
 
 .card1:hover {
-  width: 28.6vw; /* 22vw * 1.3 */
+  width: 28.6vw;
 }
 
 .card1:hover .mini1 {
