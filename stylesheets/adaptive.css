@@ -179,7 +179,7 @@
   }
   .form {
     display: flex;
-    width: 50.31%;
+    width: 60.31%;
     min-height: 80vw;
     flex-direction: column;
     gap: 4vw;
@@ -192,23 +192,23 @@
   }
   .formTextBig {
     text-align: center;
-    font-size: 4vw;
+    font-size: 5vw;
     color: #fff;
     font-family: Montserrat;
     font-weight: 600;
   }
   .formTextSmall {
     text-align: center;
-    font-size: 2vw;
+    font-size: 3vw;
     color: #fff;
     font-family: Montserrat;
     font-weight: 200;
-    max-width: 30vw;
+    max-width: 50vw;
   }
   .formy {
     width: 75%;
     height: 6vw;
-    font-size: 2vw;
+    font-size: 3vw;
     font-family: Montserrat;
     font-weight: 100;
     border-radius: 4vw;
@@ -222,7 +222,7 @@
     height: 6vw;
     background-color: black;
     color: #fff;
-    font-size: 2.4vw;
+    font-size: 3vw;
     font-family: Montserrat;
     font-weight: 100;
     border-radius: 4vw;
