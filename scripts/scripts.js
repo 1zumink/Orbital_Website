@@ -154,3 +154,88 @@ function whereToGoAnim() {
     })
   })
 }
+
+const meteors = document.querySelectorAll('.meteors div')
+const container = document.querySelector('.meteors')
+const containerRect = container.getBoundingClientRect()
+
+const meteorData = []
+
+meteors.forEach((meteor) => {
+  let x = Math.random() * (containerRect.width - meteor.offsetWidth)
+  let y = Math.random() * (containerRect.height - meteor.offsetHeight)
+
+  let dx = (Math.random() - 0.5) * 2
+  let dy = (Math.random() - 0.5) * 2
+
+  meteor.style.left = x + 'px'
+  meteor.style.top = y + 'px'
+
+  meteorData.push({ meteor, x, y, dx, dy, dragging: false })
+
+  let offsetX, offsetY
+
+  meteor.addEventListener('mousedown', (e) => {
+    meteorData.find((m) => m.meteor === meteor).dragging = true
+    offsetX = e.clientX - meteor.offsetLeft
+    offsetY = e.clientY - meteor.offsetTop
+    meteor.style.cursor = 'grabbing'
+  })
+
+  document.addEventListener('mousemove', (e) => {
+    const data = meteorData.find((m) => m.meteor === meteor)
+    if (data.dragging) {
+      data.x = e.clientX - offsetX
+      data.y = e.clientY - offsetY
+
+      data.x = Math.max(
+        0,
+        Math.min(data.x, containerRect.width - meteor.offsetWidth)
+      )
+      data.y = Math.max(
+        0,
+        Math.min(data.y, containerRect.height - meteor.offsetHeight)
+      )
+
+      meteor.style.left = data.x + 'px'
+      meteor.style.top = data.y + 'px'
+    }
+  })
+
+  document.addEventListener('mouseup', (e) => {
+    const data = meteorData.find((m) => m.meteor === meteor)
+    if (data.dragging) {
+      data.dragging = false
+      meteor.style.cursor = 'grab'
+
+      data.dx = (Math.random() - 0.5) * 2
+      data.dy = (Math.random() - 0.5) * 2
+    }
+  })
+})
+
+function meteorss() {
+  meteorData.forEach((data) => {
+    if (!data.dragging) {
+      data.x += data.dx
+      data.y += data.dy
+
+      if (
+        data.x <= 0 ||
+        data.x >= containerRect.width - data.meteor.offsetWidth
+      )
+        data.dx *= -1
+      if (
+        data.y <= 0 ||
+        data.y >= containerRect.height - data.meteor.offsetHeight
+      )
+        data.dy *= -1
+
+      data.meteor.style.left = data.x + 'px'
+      data.meteor.style.top = data.y + 'px'
+    }
+  })
+
+  requestAnimationFrame(meteorss)
+}
+meteorss()

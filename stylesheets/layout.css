@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   width: 100vw;
   display: flex;
@@ -44,33 +47,27 @@ body {
   background-size: cover;
 }
 .anchor1 {
-  width: 12vw;
-  height: 6vw;
+  width: 5.42vw;
+  height: 3.47vw;
   background-image: url('../images/anchor1.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 .anchor2 {
-  width: 12vw;
-  height: 6vw;
-  background-image: url('../images/anchor1.svg');
+  width: 7.43vw;
+  height: 3.47vw;
+  background-image: url('../images/anchor2.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 .anchor3 {
-  width: 12vw;
-  height: 6vw;
-  background-image: url('../images/anchor1.svg');
+  width: 7.78vw;
+  height: 3.47vw;
+  background-image: url('../images/anchor3.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }
-.anchor4 {
-  width: 12vw;
-  height: 6vw;
-  background-image: url('../images/anchor1.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 /* ВЫБОР ЦВЕТА */
 .colors {
   width: 100%;
@@ -649,4 +646,74 @@ div.pink {
 
 .none {
   display: none;
+}
+/* МЕТЕОРЫ */
+.meteors {
+  width: 100vw;
+  height: 180vh;
+  position: relative;
+  overflow: hidden;
+  background-image: url('../images/bgMeteor.svg');
+  background-repeat: no-repeat;
+  background-size: 98%;
+  background-position: center;
+}
+.meteors div {
+  position: absolute;
+  cursor: grab;
+  user-select: none;
+}
+/* МЕТЕОРЫ КОМПОНЕНТЫ */
+.meteor1 {
+  width: 29.51vw;
+  height: 20.97vw;
+  position: absolute;
+  background-image: url('../images/meteor1.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.meteor2 {
+  width: 29.58vw;
+  height: 24.24vw;
+  position: absolute;
+  background-image: url('../images/meteor2.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.meteor3 {
+  width: 25.69vw;
+  height: 19.44vw;
+  position: absolute;
+  background-image: url('../images/meteor3.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.meteor4 {
+  width: 29.51vw;
+  height: 20.97vw;
+  position: absolute;
+  background-image: url('../images/meteor4.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.meteor5 {
+  width: 37.57vw;
+  height: 28.13vw;
+  position: absolute;
+  background-image: url('../images/meteor5.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+/* ФУТЕР */
+.footer {
+  width: 100%;
+  height: 10vw;
+}
+.lastText {
+  align-items: center;
+  justify-content: center;
+  font-size: 6.4vw;
+  color: #fff;
+  font-family: Montserrat;
+  font-weight: 100;
 }
