@@ -1,4 +1,7 @@
 @media screen and (max-width: 500px) {
+  body {
+    overflow: hidden;
+  }
   .rings3D {
     height: 80vh;
   }
