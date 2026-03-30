@@ -177,59 +177,58 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-}
-
-.form {
-  display: flex;
-  width: 50.31%;
-  min-height: 80vw;
-  flex-direction: column;
-  gap: 4vw;
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.01);
-  border-radius: 6vw;
-  border: 3px solid rgba(241, 90, 255, 1);
-  align-items: center;
-  justify-content: center;
-}
-.formTextBig {
-  text-align: center;
-  font-size: 4vw;
-  color: #fff;
-  font-family: Montserrat;
-  font-weight: 600;
-}
-.formTextSmall {
-  text-align: center;
-  font-size: 2vw;
-  color: #fff;
-  font-family: Montserrat;
-  font-weight: 200;
-  max-width: 30vw;
-}
-.formy {
-  width: 75%;
-  height: 6vw;
-  font-size: 2vw;
-  font-family: Montserrat;
-  font-weight: 100;
-  border-radius: 4vw;
-  border-color: white;
-}
-.formy::placeholder {
-  padding-left: 1vw;
-}
-.formButton {
-  width: 75%;
-  height: 6vw;
-  background-color: black;
-  color: #fff;
-  font-size: 2.4vw;
-  font-family: Montserrat;
-  font-weight: 100;
-  border-radius: 4vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  .form {
+    display: flex;
+    width: 50.31%;
+    min-height: 80vw;
+    flex-direction: column;
+    gap: 4vw;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.01);
+    border-radius: 6vw;
+    border: 3px solid rgba(241, 90, 255, 1);
+    align-items: center;
+    justify-content: center;
+  }
+  .formTextBig {
+    text-align: center;
+    font-size: 4vw;
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 600;
+  }
+  .formTextSmall {
+    text-align: center;
+    font-size: 2vw;
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 200;
+    max-width: 30vw;
+  }
+  .formy {
+    width: 75%;
+    height: 6vw;
+    font-size: 2vw;
+    font-family: Montserrat;
+    font-weight: 100;
+    border-radius: 4vw;
+    border-color: white;
+  }
+  .formy::placeholder {
+    padding-left: 1vw;
+  }
+  .formButton {
+    width: 75%;
+    height: 6vw;
+    background-color: black;
+    color: #fff;
+    font-size: 2.4vw;
+    font-family: Montserrat;
+    font-weight: 100;
+    border-radius: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
 }
